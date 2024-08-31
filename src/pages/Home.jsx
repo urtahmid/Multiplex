@@ -9,7 +9,7 @@ import Services from '../services/Services';
 import ProductList from '../components/UI/ProductList';
 const Home = () => {
     const year = new Date().getFullYear()
-    return <Helmet title={'Multiplex'}>
+    return <Helmet title={'Home'}>
         <section className='hero_section'>
             <Container>
                 <Row>
