@@ -1,14 +1,16 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-import {Col, Row} from "reactstrap"
-const ProductList = () => {
+import { Row } from "reactstrap"
+
+const ProductList = ({ data }) => {
     return (
-        <Row>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-            <ProductCard></ProductCard>
-        </Row>
+        <>
+            {
+                data?.map((item, index) => (
+                    <ProductCard key={index} item={item}  />
+                ))
+            }
+        </>
     );
 };
 
