@@ -17,10 +17,10 @@ const ProductCard = ({ item }) => {
             id: item.id,
             productName: item.productName,
             price: item.price,
-            image: item.imgUrl,
+            imgUrl: item.imgUrl,
         }));
 
-        toast('Product added successfully to the cart');
+        toast.success('Product added successfully to the cart');
     }
 
     return (
@@ -31,7 +31,7 @@ const ProductCard = ({ item }) => {
                 </div>
                 <div className=' product_info p-2'>
                     <h3 className="product_name">
-                        <Link to={`/shop/id${item.id}`}>{item.productName}</Link>
+                        <Link to={`/shop/${item.id}`}>{item.productName}</Link>
                     </h3>
                     <span className=''>Chair</span>
                 </div>
